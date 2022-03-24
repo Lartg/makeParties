@@ -1,0 +1,19 @@
+{
+  "development": {
+    "username": "1",
+    "password": "1",
+    "database": "events-tutorial",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": null,
+    "password": null,
+    "database": "my-db-test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL"
+  }
+ }
