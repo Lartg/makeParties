@@ -9,6 +9,8 @@
   "author": "lartg",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3",
+    "node-fetch": "^3.2.3"
   }
 }
