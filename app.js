@@ -49,8 +49,8 @@ sequelize.authenticate()
  });
 
 
- require('./controllers/events')(app, models);
-
+require('./controllers/events')(app, models);
+require('./controllers/rsvps')(app, models);
 
 const port = process.env.PORT || 3000;
 
