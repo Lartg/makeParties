@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "1",
-    "password": "1",
+    "username": null,
+    "password": null,
     "database": "events-tutorial",
     "host": "127.0.0.1",
     "dialect": "postgres"
@@ -9,7 +9,7 @@
   "test": {
     "username": null,
     "password": null,
-    "database": "my-db-test",
+    "database": "events-tutorial",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
