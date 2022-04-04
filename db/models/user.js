@@ -25,5 +25,11 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'User',
   });
+  User.addHook('beforeCreate', async function(user) {
+    const salt = await bcrypt.genSalt(10); //whatever number you want
+    console.log(user);
+    user.password = await bcrypt.hash(user.password, salt);
+  })
   return User;
 };
+
