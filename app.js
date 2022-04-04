@@ -10,8 +10,8 @@ const bodyParser = require('body-parser');
 //db
 const { Sequelize } = require('sequelize')
 // // Option 1: Passing a connection URI
-// const sequelize = new Sequelize('sqlite::memory:') // Example for sqlite
-const sequelize = new Sequelize('postgres://acopanocuxzcep:0bcefdc727ace2cdfae6468080d7d0c00d7c767de6809809e1a058f723d6f4b8@ec2-52-3-60-53.compute-1.amazonaws.com:5432/dl4ktqku4kfva') // Example for postgres
+const sequelize = new Sequelize('sqlite::memory:') // Example for sqlite
+// const sequelize = new Sequelize('postgres://acopanocuxzcep:0bcefdc727ace2cdfae6468080d7d0c00d7c767de6809809e1a058f723d6f4b8@ec2-52-3-60-53.compute-1.amazonaws.com:5432/dl4ktqku4kfva') // Example for postgres
 
 // // Option 2: Passing parameters separately (sqlite)
 // const sequelize = new Sequelize({
@@ -48,7 +48,7 @@ sequelize.authenticate()
    console.error('Unable to connect to the database:', err);
  });
 
-
+require('./controllers/auth')(app, models);
 require('./controllers/events')(app, models);
 require('./controllers/rsvps')(app, models);
 
